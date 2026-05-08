@@ -1,70 +1,179 @@
-# Getting Started with Create React App
+# TP 11 : Communication HTTP entre Frontend et Backend avec Fetch et Axios
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
 
-## Available Scripts
+Ce projet React a été réalisé dans le cadre du TP 11 du cours **Développement web full-stack avec JavaScript**.
 
-In the project directory, you can run:
+L’objectif principal est de comprendre et maîtriser la communication HTTP entre une application frontend React et une API backend simulée avec JSON Server.
 
-### `npm start`
+Le projet utilise :
+- React JS
+- Fetch API
+- Axios
+- JSON Server
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Objectifs pédagogiques
 
-### `npm test`
+Ce TP permet de :
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Comprendre les requêtes HTTP (GET, POST, DELETE)
+- Utiliser Fetch API pour communiquer avec une API REST
+- Utiliser Axios et ses fonctionnalités avancées
+- Gérer les erreurs HTTP
+- Manipuler les états React avec les Hooks
+- Créer des hooks personnalisés
+- Implémenter un système de cache simple
+- Simuler une authentification
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Technologies utilisées
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- React JS
+- JavaScript ES6+
+- Axios
+- Fetch API
+- JSON Server
+- HTML5
+- CSS3
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+# Structure du projet
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+src/
+│
+├── components/
+│   ├── FetchDemo/
+│   │   ├── FetchBasic.js
+│   │   ├── FetchAdvanced.js
+│   │   └── FetchUpload.js
+│   │
+│   ├── AxiosDemo/
+│   │   ├── AxiosBasic.js
+│   │   ├── AxiosConfig.js
+│   │   └── AxiosAdvanced.js
+│   │
+│   └── Shared/
+│       ├── ErrorBoundary.js
+│       └── ProgressBar.js
+│
+├── hooks/
+│   └── useFetch.js
+│
+├── services/
+│   ├── api.js
+│   ├── axiosInstance.js
+│   ├── authService.js
+│   └── cacheService.js
+│
+└── App.js
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+# Fonctionnalités réalisées
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Fetch API
 
-## Learn More
+* Récupération des utilisateurs
+* Gestion des erreurs HTTP
+* Création d’utilisateurs
+* Timeout avec AbortController
+* Chargement des commentaires et auteurs
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Axios
 
-### Code Splitting
+* Configuration d’instance Axios
+* Requêtes GET / POST / DELETE
+* Gestion automatique du JSON
+* Gestion avancée des erreurs
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## Hooks React utilisés
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+* useState
+* useEffect
+* useCallback
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Fonctionnalités avancées
 
-### Advanced Configuration
+* Hook personnalisé `useFetch`
+* Service d’authentification
+* Gestion du token JWT
+* Cache des requêtes HTTP
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+# Comparaison Fetch vs Axios
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+| Fonctionnalité                       | Fetch   | Axios       |
+| ------------------------------------ | ------- | ----------- |
+| Inclus dans le navigateur            | Oui     | Non         |
+| Conversion JSON automatique          | Non     | Oui         |
+| Gestion automatique des erreurs HTTP | Non     | Oui         |
+| Timeout intégré                      | Non     | Oui         |
+| Intercepteurs                        | Non     | Oui         |
+| Simplicité                           | Moyenne | Très simple |
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Captures d'écran
+
+<img width="1346" height="622" alt="Capture d’écran 2026-05-08 114023" src="https://github.com/user-attachments/assets/25888901-ca18-4d02-87a6-522b34267b0c" />
+
+
+<img width="1363" height="580" alt="Capture d’écran 2026-05-08 114112" src="https://github.com/user-attachments/assets/0e22baaa-15dd-45ba-820f-a306316a847b" />
+
+
+<img width="1347" height="629" alt="Capture d’écran 2026-05-08 114139" src="https://github.com/user-attachments/assets/823a4bb9-7458-46e4-89f4-4356197b43be" />
+
+# Résultat attendu
+
+L’application permet :
+
+* d’afficher les utilisateurs
+* d’ajouter des utilisateurs
+* d’afficher les posts
+* de supprimer des posts
+* de tester Fetch et Axios
+* de simuler une API backend
+
+---
+
+# Auteur
+
+Projet réalisé par :
+
+**Fatima-ezzahra Sahmad**
+
+Dans le cadre du module :
+
+**Développement web full-stack avec JavaScript**
+
+---
+
+# Conclusion
+
+Ce TP a permis de comprendre le fonctionnement des communications HTTP dans une application React moderne.
+
+Les principales notions étudiées sont :
+
+* Fetch API
+* Axios
+* Gestion des erreurs
+* API REST
+* Hooks React
+* Authentification
+* Cache des données
+
+Ce projet constitue une excellente base pour le développement d’applications web full-stack modernes.
+
