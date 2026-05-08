@@ -31,7 +31,7 @@ function App() {
       <header className="App-header">
         <h1>Communication HTTP Frontend-Backend</h1>
         <p>Démonstration de l'API Fetch et d'Axios
-</p>
+
       </header>
 
       <nav className="App-nav">
@@ -81,7 +81,7 @@ function App() {
       <footer className="App-footer">
         <p>
           TP: Communication HTTP entre Frontend et Backend avec Fetch et Axios
-        </p>
+        
 
       </footer>
     </div>
